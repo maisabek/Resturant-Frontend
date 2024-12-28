@@ -24,11 +24,27 @@
 .fs-10px{
   font-size: 10px;
 }
-
+.z-index-3{
+  z-index: 3;
+}
 .h-300px {
   height: 300px;
 }
 
 .h-200px {
   height: 200px;
+}
+
+::-webkit-scrollbar {
+  width: 13px !important;
+  background-color: $primary-light !important;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $primary-active !important;
+  border-radius: 3px !important;
+  border: 3px solid $primary-light !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: $primary-active !important;
 }
