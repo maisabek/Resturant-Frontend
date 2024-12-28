@@ -1,0 +1,263 @@
+// *{overflow-y:hidden}
+.header{
+  background: url(../../../../../assets/Images/landing-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 760px;
+  overflow: hidden  !important;
+  // animation: translateHeader 8s reverse;
+
+  p{  font-family: cursive;}
+  .content{
+      color: #9C7C57;
+      padding-top: 20px;
+      margin: 11% 0%;
+      // position: absolute;
+      text-align: center;
+      font-size: 26px;
+      font-family: cursive;
+      button{
+          border: 2px solid #9C7C57;
+          background: transparent;
+          outline: none;
+          color: white;
+          font-size: 18px;
+          padding: 10px;
+          margin: 3% 0;
+      }
+  }
+}
+.inner-pages{
+  .overlay{
+      position: absolute;
+      background: rgba(4, 26, 26, 0.5);
+      // top:0%;
+      left: 0%;
+      top:100%;
+      width:100%;
+      height: 100%;
+      color: white;
+      transition: top 1s;
+
+  }
+  a{text-decoration: none}
+  h5{text-align: center;color: #9C7C57;font-size: 20px;margin: 0 3%}
+  p{
+  color: white;
+  font-size: 20px;
+  font-family: "fangsong";
+      text-align: center;
+  margin: 9% 0%
+  }
+  .content{
+    box-shadow: -1px 4px 8px 0px rgb(9, 49, 49);
+      -moz-box-shadow:  -1px 4px 8px 0px rgb(9, 41, 41);
+      -webkit-box-shadow: -1px 4px 8px 0px rgb(8, 37, 37);
+      -o-box-shadow: -1px 4px 8px 0px rgb(7, 37, 37);
+      -ms-box-shadow:  -1px 4px 8px 0px rgb(7, 36, 36);
+  }
+  .allcontent{
+      position: relative;
+      overflow: hidden;
+
+  }
+
+}
+.allcontent:hover .overlay{
+top: 0%;
+}
+.ser-img{
+  margin-left: 42%;margin-top: 12px
+}
+h5{
+  color: #9C7C57;
+  font-size: 20px;
+  font-family: cursive;
+  text-align: center;
+}
+.review{
+
+  button{
+      width: 100%;
+      background: transparent;
+      color: white;
+      border: 1px solid #9C7C57;
+      padding: 7px;
+      outline: none;
+  }
+  mat-label{color: white}
+  mat-form-field{
+      width: 100%;
+  color: white;
+  padding: 40px;
+  }
+
+}
+.location{
+.overlay{
+  position: absolute;
+  background: rgba(9, 49, 49, 0.5);
+  top:0%;
+  right:100%;
+  width:100%;
+  height: 100%;
+  color: white;
+  transition: right 1s;
+
+}
+.content{
+  position: relative;
+  transition: all 5s ease-in-out;
+  overflow: hidden;
+
+}
+img{
+  transition: all 9s ease-in-out
+}
+}
+
+.location .content:hover img{
+  transform: scale(1.5)
+}
+.location .content:hover .overlay{
+  right:0
+  }
+  .btn{
+      border:none;
+      outline: none;
+      background:rgb(9, 41, 41) ;
+      color: white;
+      margin: 5% 0%;
+      width: 100%;
+  }
+  popover-content{
+      width: 40%;
+      height: 300px;
+  }
+
+@keyframes translateHeader{
+  0%{
+      transform:  scale(1.1);
+
+  }
+  20%{
+      transform:  scale(1.2);
+
+  }
+  40%{
+      transform:  scale(1.3);
+  }
+  60%{
+      transform:  scale(1.4);
+  }
+  80%{
+      transform:  scale(1.5);
+  }
+  100%{
+      transform: scale(1.6);
+
+  }
+}
+.resturant-content{
+  padding: 30px;
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px;
+  animation: translateUp 5s infinite;
+}
+@keyframes translateUp{
+  0%{
+    transform: translateY(30px);
+  }
+  50%{
+      transform: translateY(-30px);
+
+  }
+  100%{
+      transform: translateY(30px);
+
+  }
+
+}
+.cardContainer{
+  // background-image: url(../../../assets/images/09.jpg);
+  margin: 0 40%;
+  background: white;
+  // margin-left:30%;
+  // margin-bottom: 80%;
+  width: 268px;
+  height: 382px;
+  background-size:cover;
+  background-position:center;
+  perspective: 1000px;
+  position:relative;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%,-50%);
+}
+.cover{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #345b8c;
+
+
+  /*left: 40px;*/
+  transform: rotatey(-20deg);
+  transform-style: preserve-3d;
+  transform-origin: left;
+  transition: all .7s ease-in-out ;
+}
+
+.cardContainer:hover .cover{
+  transform:rotateY(-180deg);
+}
+figure{
+  //  margin: 0;
+   display: block;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+  //  backface-visibility: hidden;
+}
+figure.front {
+
+  background: black;
+
+}
+figure.back{
+
+  background: black;
+   transform: rotatey(180deg);
+}
+@media (max-width: 767px ){/* mobile & tablet*/
+.inner-pages .ser-img{margin-left: 20%;}
+.ser-img{
+  margin-left: 22%;
+}
+.resturant-content{
+margin-left: -8%;
+padding: 30px;
+}
+.cardContainer{
+  width: 188px;
+  margin: 0 47%;
+  height: 287px;
+}
+iframe{height:600px !important}
+.inner-pages .allcontent{
+  margin: 3% 0px;
+}
+.header .content {
+
+  margin: 47% 0%;
+}
+.map{margin-left: 0% !important;}
+}
+@media (min-width: 768px) and (max-width:991px){ /* small screen */
+  .inner-pages .ser-img{margin-left: 34%;}
+}
+@media (min-width: 992px) and (max-width:1199px) { /* medium screen */
+  .inner-pages .ser-img{margin-left: 39%;}
+}
