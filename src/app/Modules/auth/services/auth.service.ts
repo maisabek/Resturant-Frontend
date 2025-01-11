@@ -23,4 +23,14 @@ export class AuthService {
   register(data:RegisterRequest){
     return this.http.post(`${this.apiUrl}/${this.controller}/Register`,data)
   }
+
+  getToken(){
+    return localStorage.getItem("token")
+  }
+  setToken(token:string){
+   localStorage.removeItem("token");
+   localStorage.setItem("token",token);
+
+
+  }
 }

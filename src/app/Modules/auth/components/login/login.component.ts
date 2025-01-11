@@ -31,16 +31,19 @@ export class LoginComponent extends BaseComponent{
   }
 
   login(){
+    this.isBusy=true
     this.subscriptions.push(
       this.authService.login(this.formBuild.value).subscribe((res:any)=>{
         if(res.isSuccess){
-          localStorage.setItem("token",res.token)
-          this.router.navigateByUrl("home")
+          this.authService.setToken(res.token);
+          this.router.navigateByUrl("/home/index")
         }else{
           this.isFaild=true
         }
+        this.isBusy=false
       },(err)=>{
         this.isFaild=true
+        this.isBusy=false
       })
     )
   }

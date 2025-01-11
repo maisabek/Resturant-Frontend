@@ -37,14 +37,17 @@ export class RegisterComponent extends BaseComponent {
     });
   }
   registerFn() {
+    this.isBusy=true
     this.subscriptions.push(
       this.authService.register(this.registerForm.value).subscribe((res:any)=>{
         if(res.isSuccess){
-          localStorage.setItem("token",res.token)
-          this.router.navigateByUrl("/home")
+          this.authService.setToken(res.token);
+          this.router.navigateByUrl("/home/index")
         }
+        this.isBusy=false
       },err=>{
         this.errors=err.error.errors;
+        this.isBusy=false
       })
     )
 

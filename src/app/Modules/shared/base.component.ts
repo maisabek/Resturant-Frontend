@@ -10,6 +10,7 @@ export abstract class BaseComponent implements OnChanges,OnInit,AfterViewInit,On
   router: Router;
   route: ActivatedRoute;
   fb:FormBuilder
+  isBusy:boolean=false
   protected subscriptions: Array<Subscription> = [];
   ngUnsubscribe = new Subject<void>();
 

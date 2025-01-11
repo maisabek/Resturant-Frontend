@@ -41,8 +41,10 @@
                 Don't Have Accoun ? <a routerLink="/auth/register" class="text-primary"> Sign Up</a>
               </div>
             <button type="submit" class="btn btn-light-primary w-25 py-2 mt-4"
-            [disabled]="formBuild.invalid"
-            >Login</button>
+            [disabled]="!formBuild.valid  && !isBusy"
+            >
+            <i class="fas fa-sync-alt fa-spin text-white" *ngIf="isBusy"></i>  Login
+          </button>
           </div>
           </form>
         </div>

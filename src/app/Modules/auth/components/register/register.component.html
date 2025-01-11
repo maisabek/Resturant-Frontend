@@ -67,8 +67,9 @@
           </div>
           <div class="p-t-30 mt-2">
             <button class="btn btn-light-primary" type="button"
-              [disabled]="!registerForm.valid"
-              (click)=" registerFn()">Register</button>
+              [disabled]="!registerForm.valid && !isBusy"
+              (click)="registerFn()">
+              <i class="fas fa-sync-alt fa-spin text-white mx-1" *ngIf="isBusy"></i> Register</button>
           </div>
         </form>
       </div>
