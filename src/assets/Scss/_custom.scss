@@ -17,6 +17,9 @@
   color: $white !important;
 
 }
+.bg-primary{
+  background-color: $primary !important;
+}
 
 .outline-none {
   outline: none
@@ -47,4 +50,12 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: $primary-active !important;
+}
+.bg-light{
+  background-color: rgb(211, 226, 209) !important;
+}
+.bg-pattern{
+  // background-image: url('../../assets/Images/pattern02.png');
+  background-size: cover;
+  height: 100%;
 }

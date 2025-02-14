@@ -6,6 +6,8 @@ import { TokenInterceptor } from './interceptors/token-interceptor';
 import { LoadingBarModule } from '@ngx-loading-bar/core';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { SpinnerInterceptor } from './interceptors/SpinnerInterceptor';
+import { NgxEchartsModule } from 'ngx-echarts';
+import { MapComponent } from './components/map/map.component';
 // import {HttpClientModule} from '@angular/common/http'
 // import { CarouselModule } from 'ngx-owl-carousel-o';
 // import { NgxTypedJsModule } from 'ngx-typed-js';
@@ -14,7 +16,7 @@ import { SpinnerInterceptor } from './interceptors/SpinnerInterceptor';
 
 @NgModule({
   declarations: [
-
+    MapComponent
   ],
   imports: [
     ReactiveFormsModule,
@@ -23,6 +25,9 @@ import { SpinnerInterceptor } from './interceptors/SpinnerInterceptor';
     // CarouselModule,
     LoadingBarModule,
     NgxSpinnerModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts'),
+    }),
     CommonModule
   ],
   exports:[
@@ -31,7 +36,9 @@ import { SpinnerInterceptor } from './interceptors/SpinnerInterceptor';
     // CarouselModule,
     LoadingBarModule,
     NgxSpinnerModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxEchartsModule,
+    MapComponent
   ],
   providers:[
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },

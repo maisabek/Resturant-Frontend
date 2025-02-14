@@ -11,6 +11,10 @@ const routes: Routes = [
   {
     path:'home',
     loadChildren:()=>import("../app/Modules/portal/portal.module").then(m=>m.PortalModule)
+  },
+  {
+    path:'dashboard',
+    loadChildren:()=>import("../app/Modules/admin/admin.module").then(m=>m.AdminModule)
   }
 ];
 
