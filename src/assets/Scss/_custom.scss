@@ -52,10 +52,26 @@
   background-color: $primary-active !important;
 }
 .bg-light{
-  background-color: rgb(255, 255, 255) !important;
+  background-color: #F7F9FA !important;
 }
 .bg-pattern{
   // background-image: url('../../assets/Images/pattern02.png');
   background-size: cover;
   height: 100%;
+}
+.border-7px{
+  border: 7px solid $primary;
+
+}
+.search_input{
+  background: gainsboro;
+  border: none;
+  border-radius: 20px;
+  color: white;
+}
+::-webkit-input-placeholder{
+  color: white;
+}
+.rounded-16px{
+  border-radius: 16px;
 }
